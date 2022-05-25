@@ -64,6 +64,14 @@ public class CommandManagerWindow extends JFrame implements WindowComponent {
 		c.weighty = 1;
 		content.add(btnClearCommand, c);
 
+		JButton btnRunCommand = new JButton("Run command");
+		btnClearCommand.addActionListener((ActionEvent e) -> this.runCommand());
+		c.fill = GridBagConstraints.BOTH;
+		c.weightx = 1;
+		c.gridx = 0;
+		c.weighty = 1;
+		content.add(btnRunCommand, c);
+
 		JButton btnClearObservers = new JButton("Delete observers");
 		btnClearObservers.addActionListener((ActionEvent e) -> this.deleteObservers());
 		c.fill = GridBagConstraints.BOTH;
@@ -71,6 +79,22 @@ public class CommandManagerWindow extends JFrame implements WindowComponent {
 		c.gridx = 0;
 		c.weighty = 1;
 		content.add(btnClearObservers, c);
+
+		JButton btnResetObservers = new JButton("Reset observers");
+		btnClearObservers.addActionListener((ActionEvent e) -> this.resetObservers());
+		c.fill = GridBagConstraints.BOTH;
+		c.weightx = 1;
+		c.gridx = 0;
+		c.weighty = 1;
+		content.add(btnResetObservers, c);
+	}
+
+	private Object runCommand() {
+		return null;
+	}
+	
+	private Object resetObservers() {
+		return null;
 	}
 
 	private void clearCommand() {
